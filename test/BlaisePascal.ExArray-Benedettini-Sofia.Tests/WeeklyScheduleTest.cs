@@ -111,5 +111,30 @@ namespace BlaisePascal.ExArray_Benedettini_Sofia.Tests
 
             Assert.Equal("mercoledì", schedule.DayWithMostHours());
         }
+
+        [Fact]
+        public void SetHoursForDay_UppercaseDay_UpdatesSuccessfully()
+        {
+            WeeklySchedule schedule = new WeeklySchedule("Mario Rossi");
+            schedule.SetHoursForDay("LUNEDÌ", 8.0);
+            Assert.Equal(8.0, schedule.TotalHoursWorked());
+        }
+
+        [Fact]
+        public void SetHoursForDay_MixedCaseDay_UpdatesSuccessfully()
+        {
+            WeeklySchedule schedule = new WeeklySchedule("Mario Rossi");
+            schedule.SetHoursForDay("mErCoLeDì", 7.5);
+            Assert.Equal(7.5, schedule.TotalHoursWorked());
+        }
+
+        [Fact]
+        public void DayWithMostHours_UppercaseInputDay_ReturnsLowercaseDay()
+        {
+            WeeklySchedule schedule = new WeeklySchedule("Sara Blu");
+            schedule.SetHoursForDay("SABATO", 9.0);
+
+            Assert.Equal("sabato", schedule.DayWithMostHours());
+        }
     }
 }
