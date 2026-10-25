@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/doc/" />
+  <Folder Name="/src/">
+    <Project Path="src/BlaisePascal.ExArray-Benedettini-Sofia.Console/BlaisePascal.ExArray-Benedettini-Sofia.Console.csproj" />
+    <Project Path="src/BlaisePascal.ExArray-Benedettini-Sofia.Domain/BlaisePascal.ExArray-Benedettini-Sofia.Domain.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/BlaisePascal.ExArray-Benedettini-Sofia.Tests/BlaisePascal.ExArray-Benedettini-Sofia.Tests.csproj" />
+  </Folder>
+</Solution>
