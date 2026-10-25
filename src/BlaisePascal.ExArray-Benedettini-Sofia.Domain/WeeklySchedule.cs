@@ -40,7 +40,7 @@
                 throw new ArgumentException("The day entered must have characters");
             }
 
-            if (!daysOfTheWeek.Contains(day.ToLower())
+            if (!daysOfTheWeek.Contains(day.ToLower()))
             {
                 throw new ArgumentException("The day entered does not exist");
             }
@@ -73,8 +73,8 @@
                 if(hour > 8.0)
                 {
                     areDaysWithMoreThan8Hours = true;
+                    break;
                 }
-                break;
             }
 
             return areDaysWithMoreThan8Hours;
@@ -84,7 +84,7 @@
         {
             bool hasOvertime = false;
 
-            if(this.TotalHoursWorked() > 40.0 || this.AreDaysWithMoreThan8Hours == true)
+            if(this.TotalHoursWorked() > 40.0 || this.AreDaysWithMoreThan8Hours() == true)
             {
                 hasOvertime = true;
             }
