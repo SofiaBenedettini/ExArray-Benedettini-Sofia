@@ -1,6 +1,7 @@
 ﻿using BlaisePascal.ExArray_Benedettini_Sofia.Domain;
+using System;
 
-namespace BlaisePascal.ExArray_Benedettini_Sofia.Console
+namespace BlaisePascal.ExArray_Benedettini_Sofia.ConsoleApp
 {
     internal class Program
     {
@@ -18,11 +19,11 @@ namespace BlaisePascal.ExArray_Benedettini_Sofia.Console
                 employee1.SetHoursForDay("Sabato", 14.0);
 
                 Console.WriteLine($"{employee1.EmployeeName} report:");
-                Console.WriteLine($"Total hours worked during the week: {employee1.TotalHoursWorked}");
-                Console.WriteLine($"Has the employee overtime: {employee1.HasOvertime}");
-                Console.WriteLine($"Day with most hours: {employee1.DayWithMostHours}");
+                Console.WriteLine($"Total hours worked during the week: {employee1.TotalHoursWorked()}");
+                Console.WriteLine($"Has the employee overtime: {employee1.HasOvertime()}");
+                Console.WriteLine($"Day with most hours: {employee1.DayWithMostHours()}");
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
                 Console.WriteLine($"Errore: {ex.Message}");
             }
